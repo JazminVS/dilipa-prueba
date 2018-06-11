@@ -13,6 +13,7 @@ class CreateTipoUsuarios extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('tipos_usuarios');
         Schema::create("tipos_usuarios",function(Blueprint $table){
         $table->increments("id");
         $table->string("nombre",20);
