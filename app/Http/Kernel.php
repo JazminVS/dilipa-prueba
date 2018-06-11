@@ -58,6 +58,9 @@ class Kernel extends HttpKernel
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'usuarioadmin'=>\App\Http\Middleware\MDusuarioadmin::class,
-        'usuarioauditoria'=>\App\Http\Middleware\MDusuarioauditoria::class
+        'usuarioauditoria'=>\App\Http\Middleware\MDusuarioauditoria::class,
+
+        'role'=>\Caffeinated\Shinobi\Middleware\UserHasRole::class,
+        'permission'=>\Caffeinated\Shinobi\Middleware\UserHasPermission::class
     ];
 }
